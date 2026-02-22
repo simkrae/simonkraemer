@@ -1,34 +1,64 @@
 baseURL = 'https://simkrae.github.io/blog/'
-languageCode = 'de-de'
 title = 'Simon Krämer | Fachjournal'
 theme = 'PaperMod'
 
-# Verhindert den RSS-Fehler, den du vorhin hattest
+# Spracheinstellungen
+defaultContentLanguage = "en"
+defaultContentLanguageInSubdir = true
+
+[languages]
+  [languages.en]
+    languageName = "English"
+    weight = 1
+    contentDir = "content" 
+    [languages.en.params]
+        Title = "Simon Krämer | Journal"
+        description = "Journal about software, trading bots, and VPS setups"
+    [[languages.en.menu.main]]
+      name = "Posts"
+      url = "/posts"
+      weight = 10
+
+  [languages.de]
+    languageName = "Deutsch"
+    weight = 2
+    contentDir = "content"
+    [languages.de.params]
+        Title = "Simon Krämer | Fachjournal"
+        description = "Journal über Software, Tradingbots und VPS-Setups"
+    [[languages.de.menu.main]]
+      name = "Beiträge"
+      url = "/posts"
+      weight = 10
+
 [outputs]
     home = ["HTML", "RSS"]
     section = ["HTML"]
     taxonomy = ["HTML"]
     term = ["HTML"]
 
-[author]
-    name = "Simon Krämer"
-
 [params]
     env = "production"
-    title = "Simon Krämer"
-    description = "Journal über Software, Tradingbots und VPS-Setups"
     author = "Simon Krämer"
-    
-    # PaperMod spezifische Einstellungen
     showReadingTime = true
     displayFullContent = false
     ShowPostNavLinks = true
     
-    [params.homeInfoParams]
-        Title = "Willkommen"
-        Content = "Hier dokumentiere ich meine technischen Recherchen."
+    # PaperMod Language Switcher
+    showLanguageSelector = true 
 
-[[menu.main]]
-    name = "Posts"
-    url = "posts"
-    weight = 10
+    [params.homeInfoParams]
+        Title = "Documentation & Research"
+        Content = "Technical logs regarding software development and automated trading."
+
+    [params.editPost]
+        URL = "https://github.com/simkrae/blog/tree/main/content"
+        Text = "Suggest Changes"
+        appendFilePath = true
+
+[markup.highlight]
+    noClasses = false
+
+# Automatische URL-Struktur basierend auf dem Datum im Frontmatter
+[permalinks]
+    posts = '/posts/:year/:month/:slug/'
