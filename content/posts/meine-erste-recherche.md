@@ -1,6 +1,6 @@
 ---
 
-title: "Meine erste Recherche: VPS \& Docker"
+title: "Meine erste Recherche: VPS  Docker"
 
 date: 2026-02-22T13:25:00+01:00
 
