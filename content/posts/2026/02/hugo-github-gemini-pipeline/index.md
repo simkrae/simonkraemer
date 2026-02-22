@@ -7,7 +7,6 @@ tags: ["Hugo", "GitHub Actions", "CI/CD", "Gemini", "DevOps"]
 showToc: true
 draft: false
 slug: "hugo-github-pipeline"
-translationKey: "hugo-pipeline-2026"
 ---
 
 **Automating a static blog requires a decoupled architecture. By using GitHub Actions, the build process is moved from the local machine to an isolated environment. In combination with a structured set of instructions for Gemini, the entire workflow from content creation to going live can be standardized.**

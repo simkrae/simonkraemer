@@ -1,51 +1,25 @@
 baseURL = 'https://simkrae.github.io/blog/'
-title = 'Simon Krämer | Fachjournal'
+title = 'Journal'
 theme = 'PaperMod'
 
-# Spracheinstellungen
+# Language settings (Monolingual English)
+languageCode = "en"
 defaultContentLanguage = "en"
-defaultContentLanguageInSubdir = true
-
-[languages]
-  [languages.en]
-    languageName = "English"
-    weight = 1
-    contentDir = "content" 
-    [languages.en.params]
-        Title = "Simon Krämer | Journal"
-        description = "Journal about software, trading bots, and VPS setups"
-    [[languages.en.menu.main]]
-      name = "Posts"
-      url = "/posts"
-      weight = 10
-
-  [languages.de]
-    languageName = "Deutsch"
-    weight = 2
-    contentDir = "content"
-    [languages.de.params]
-        Title = "Simon Krämer | Fachjournal"
-        description = "Journal über Software, Tradingbots und VPS-Setups"
-    [[languages.de.menu.main]]
-      name = "Beiträge"
-      url = "/posts"
-      weight = 10
 
 [outputs]
-    home = ["HTML", "RSS"]
-    section = ["HTML"]
-    taxonomy = ["HTML"]
-    term = ["HTML"]
+home = ["HTML", "RSS"]
+section = ["HTML"]
+taxonomy = ["HTML"]
+term = ["HTML"]
 
 [params]
     env = "production"
-    author = "Simon Krämer"
+    [params.author]
+        name = "Journal"
     showReadingTime = true
     displayFullContent = false
     ShowPostNavLinks = true
-    
-    # PaperMod Language Switcher
-    showLanguageSelector = true 
+    showLanguageSelector = false 
 
     [params.homeInfoParams]
         Title = "Documentation & Research"
@@ -56,9 +30,14 @@ defaultContentLanguageInSubdir = true
         Text = "Suggest Changes"
         appendFilePath = true
 
+[[menu.main]]
+    name = "Blog"
+    url = "/posts/"
+    weight = 10
+
 [markup.highlight]
     noClasses = false
 
-# Automatische URL-Struktur basierend auf dem Datum im Frontmatter
+# Automatic URL structure
 [permalinks]
     posts = '/posts/:year/:month/:slug/'
