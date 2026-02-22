@@ -1,0 +1,9 @@
+# Hugo Standard
+public/
+resources/
+.hugo_build.lock
+hugo_stats.json
+
+# Betriebssystem-Müll
+Thumb.db
+.DS_Store
