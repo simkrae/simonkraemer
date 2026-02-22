@@ -1,4 +1,34 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Project'
+baseURL = 'https://simkrae.github.io/blog/'
+languageCode = 'de-de'
+title = 'Simon Krämer | Fachjournal'
 theme = 'PaperMod'
+
+# Verhindert den RSS-Fehler, den du vorhin hattest
+[outputs]
+    home = ["HTML", "RSS"]
+    section = ["HTML"]
+    taxonomy = ["HTML"]
+    term = ["HTML"]
+
+[author]
+    name = "Simon Krämer"
+
+[params]
+    env = "production"
+    title = "Simon Krämer"
+    description = "Journal über Software, Tradingbots und VPS-Setups"
+    author = "Simon Krämer"
+    
+    # PaperMod spezifische Einstellungen
+    showReadingTime = true
+    displayFullContent = false
+    ShowPostNavLinks = true
+    
+    [params.homeInfoParams]
+        Title = "Willkommen"
+        Content = "Hier dokumentiere ich meine technischen Recherchen."
+
+[[menu.main]]
+    name = "Posts"
+    url = "posts"
+    weight = 10
