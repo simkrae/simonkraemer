@@ -7,3 +7,5 @@ hugo_stats.json
 # Betriebssystem-Müll
 Thumb.db
 .DS_Store
+
+.GEMINI.md
